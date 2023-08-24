@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+fieldset{
+    width: 380px;
+}
+table{
+    padding: 30px;
+    border-spacing: 20px;
+}
+th{
+    text-align: left;
+}
+tr{
+    padding: 50x;   
+}
+.col2{
+text-align: right;
+}
+#total td{
+    background-color: gray;
+    border-radius: 5px;
+    padding: 10px 0px;
+}

@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+.container{
+    margin:20px 80px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+ul{
+    list-style: none;
+}
+ul li{
+   width: 1500px;
+   height: 200px;
+    background-color: rgb(235, 230, 230);
+    margin: 20px;
+    padding: 20px 80px;
+    box-sizing: border-box;
+    
+}
+h3, p{
+    margin-top: 20px;
+}
+.material-icons{
+    color: rgb(47, 235, 235);
+  
+    
+}
+.icon{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(47, 235, 235);
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}

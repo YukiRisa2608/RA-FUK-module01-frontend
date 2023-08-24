@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu dọc bên trái</title>
+    <style>
+        #menu {
+            width: 200px;
+            height: 100%;
+            background-color: #f1f1f1;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        #menu a {
+            display: block;
+            padding: 12px 16px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        #menu a.active {
+            background-color: #4CAF50;
+            color: #fff;
+        }
+
+        #main {
+            margin-left: 200px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <a class="active" href="#home">Trang chủ</a>
+        <a href="#news">Tin tức</a>
+        <a href="#contact">Liên hệ</a>
+        <a href="#about">Về chúng tôi</a>
+    </div>
+    <div id="main">
+        <h1>Menu dọc bên trái</h1>
+        <p>Đây là nội dung chính của trang web.</p>
+    </div>
+</body>
+
+</html>

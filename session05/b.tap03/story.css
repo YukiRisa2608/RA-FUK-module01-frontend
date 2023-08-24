@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.container {
+    width: 980px;
+    margin: 0 30px;
+    text-align: center;
+    display: inline-block;
+}
+
+header {
+    width: 980px;
+    height: 100px;
+    background-color: rgb(235, 120, 120);
+}
+
+.headline {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+img {
+    /* float: right; */
+    width: 200;
+    height: 400;
+    max-width: 100%;
+    height: auto;
+}
+
+/* header image {
+    padding-left: 50px;
+} */
+nav {
+    height: 35px;
+    background-color: chocolate;
+}
+
+nav .menu ul {
+    list-style: none;
+}
+
+nav .menu ul li {
+    float: left;
+    line-height: 35px;
+    padding: 0 15px;
+}
+
+nav .menu ul li a {
+    color: aliceblue;
+    font-size: 15px;
+}
+
+nav .search {
+    line-height: 35px;
+    float: right;
+    margin-right: 100px;
+
+}
+
+h1 {
+    padding-top: 35px;
+    font-size: 80;
+    text-transform: uppercase;
+    color: aliceblue;
+
+}
+
+h3 {
+    font-size: 15px;
+    color: rgb(196, 78, 78);
+    text-transform: uppercase;
+    border: 1px solid;
+    display: inline-block;
+    /* margin: 40 0;
+    text-align: center; */
+}
+
+h5 {
+    text-transform: uppercase;
+}
+
+.stories li {
+    display: block;
+    float: left;
+    width: 200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    /* box-sizing: border-box; */
+    /* flex-wrap: wrap; */
+}
+
+.story-info a {
+    display: block;
+    text-decoration: none;
+}
+
+.story-genre {
+    text-transform: uppercase;
+    color: darkgrey;
+}
+
+.submenu {
+    display: block;
+    width: 150px;
+    background-color: rgb(165, 80, 80);
+    min-height: 150px;
+    display: none;
+    position: absolute;
+}
+
+ul .submenu li {
+    list-style: none;
+}
+
+ul .submenu li a {
+    color: aliceblue;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid rgb(241, 228, 231);
+    line-height: 30px;
+    text-align: left;
+}
+
+ul.root li a:hover {
+    background-color: rgb(214, 109, 67);
+    display: block;
+}
+
+ul.root>li:hover ul.submenu {
+    display: block;
+}
+
+ul.root>li {
+    position: relative;
+}

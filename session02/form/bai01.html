@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <h3>Create Acount</h3>
+        <fieldset>
+            <legend>Registration infomation</legend>
+            <br />
+            <form action="login.html" id="login" name="login" method="post" enctype="multipart/form-data">
+                <b>FirstName*:</b><input type="text" name="firstName" placeholder="enter your first name" required/>
+                <b>Lastname:</b><input type="text" name="lastname" placeholder="enter your last name"/><br />
+                <b>Email*:</b><input type="text" name="email" placeholder="enter your email" required/>
+                <b>Phone*:</b><input type="text" name="phone" placeholder="enter your phone number" required/><br />
+                <b>Password*:</b><input type="text" name="password" placeholder="enter your password" required/>
+                <b>Confirm Password*:</b><input type="text" name="confirmPassword" placeholder="enter your password again" required/>
+            </form>
+        </fieldset>
+
+        <fieldset>
+            <legend>Personal infomation</legend>
+            <form action="/login.html" method="post">
+                <label><b>Gender</b></label>
+                <input type="radio" name="gender" value="male" checked>
+                <label>Male</label>
+                <input type="radio" name="gender" value="female" checked>
+                <label>Female</label>
+
+                <label><b>Hobbies</b></label>
+                <input type="checkbox" name="Hobbies" value="Music">Music
+                <input type="checkbox" name="Hobbies" value="Sports">Sports
+                <input type="checkbox" name="Hobbies" value="Travel">Travel
+                <input type="checkbox" name="Hobbies" value="Movies">Movies
+            </form>
+
+            <label><b>Source of Income</b></label>
+            <select>
+                <option value="employed">Employed</option>
+            </select>
+
+            <label><b>Income</b></label>
+            <input type="range" name="income"><br>
+
+            <label><b>Age</b></label>
+            <input type="number" name="age">
+
+            <input type="file" name="file"><br>
+
+            <label><b>Birthday</b></label>
+            <input type="date" name="birthday">
+
+            <label><b>Address</b></label>
+            <input type="text" name="address"><br>
+
+            <label><b>Bio</b></label>
+            <textarea cols="50" rows="2"></textarea><br>
+        </fieldset>
+
+        <input type="button" value="Create">
+        <input type="reset" name="reset">
+
+    </fieldset>
+
+</body>
+
+</html>

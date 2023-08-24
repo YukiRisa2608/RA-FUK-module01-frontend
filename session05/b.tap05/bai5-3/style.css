@@ -1,0 +1,35 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin: 10px 300px;
+}
+
+.selectCard ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+    margin: 10px 80px;
+    
+}
+.selectCard ul li img{
+    width: 80px;
+    height: 50px;
+}
+.info input{
+    width: 650px;
+    height: 25px;
+    border-radius: 5px;
+}
+table{
+    width: 500px;
+}
+button{
+    width: 100px;
+    height: 25px;
+    background-color: blue;
+    color: white;
+    border-radius: 30px;
+}

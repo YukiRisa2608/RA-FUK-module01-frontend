@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu dọc bên trái</title>
     <style>
-        #menu {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+        }
+        .menu {
             width: 200px;
             height: 100%;
             background-color: #f1f1f1;
@@ -14,19 +22,19 @@
             padding-top: 20px;
         }
 
-        #menu a {
+        .menu a {
             display: block;
             padding: 12px 16px;
             text-decoration: none;
             color: #000;
         }
 
-        #menu a.active {
+        .menu a.active {
             background-color: #4CAF50;
             color: #fff;
         }
 
-        #main {
+        .main {
             margin-left: 200px;
             padding: 20px;
         }
@@ -34,16 +42,28 @@
 </head>
 
 <body>
-    <div id="menu">
-        <a class="active" href="#home">Trang chủ</a>
-        <a href="#news">Tin tức</a>
-        <a href="#contact">Liên hệ</a>
-        <a href="#about">Về chúng tôi</a>
-    </div>
-    <div id="main">
-        <h1>Menu dọc bên trái</h1>
-        <p>Đây là nội dung chính của trang web.</p>
-    </div>
+    <section class="container">
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a class="active" href="#home">Trang chủ</a>
+                </li>
+                <li>
+                    <a href="#news">Tin tức</a>
+                </li>
+                <li>
+                    <a href="#contact">Liên hệ</a>
+                </li>
+                <li>
+                    <a href="#about">Về chúng tôi</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="main">
+            <h1>Menu dọc bên trái</h1>
+            <p>Đây là nội dung chính của trang web.</p>
+        </div>
+    </section>
 </body>
 
 </html>

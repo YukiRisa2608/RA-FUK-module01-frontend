@@ -28,9 +28,10 @@ ul li img{
     height: auto;
 }
 button{
-    background-color: #36e2e2;
+    background-color: rgb(13, 123, 197);
     color: white;
     border-radius: 3px;
+    border-color: rgb(13, 123, 197) ;
 }
 .footer{
     width: 100%px;

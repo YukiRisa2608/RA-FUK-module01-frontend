@@ -5,31 +5,60 @@
 body{
     margin: 10px 300px;
 }
+.header{
+    margin: 50px auto;
+    display: block;
+}
+.selectCard{
+    margin: 50px;
+}
 
 .selectCard ul{
     display: flex;
     flex-direction: row;
     list-style: none;
-    justify-content: space-between;
-    margin: 10px 80px;
+    justify-content:space-around;
     
 }
+.selectCard ul li{
+    align-items: center;
+    position: relative;
+    
+
+}
 .selectCard ul li img{
-    width: 80px;
+    width: 100px;
     height: 50px;
+    border: 1px solid rgb(57, 125, 212);
+    border-radius: 7px;
+    position: absolute;
+    left: -100px;
+    bottom: -40px;
+    
+   
 }
 .info input{
-    width: 650px;
+    width: 550px;
     height: 25px;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 table{
-    width: 500px;
+    width: 800px;
+    height: 80px;
+}
+form{
+    margin: 20px auto;
+}
+input{
+    border-color: rgb(57, 125, 212);
+    padding: 6px ;
+
 }
 button{
-    width: 100px;
-    height: 25px;
-    background-color: blue;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(57, 125, 212);
+    border-color: rgb(57, 125, 212);
     color: white;
     border-radius: 30px;
 }

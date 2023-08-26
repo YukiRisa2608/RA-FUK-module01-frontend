@@ -10,38 +10,51 @@
             text-align: center;
         }
 
-        fieldset {
+        .container {
+            background-color: rgba(240, 240, 238, 0.74);
+        }
+
+        .inner {
             width: 500px;
             margin: auto;
-            background-color: rgb(206, 109, 71);
-
+            background-color: rgb(245, 234, 217);
+            margin-bottom: 20px;
         }
 
         input {
             width: 100%;
+            margin-bottom: 10px;
+            background-color:rgba(240, 240, 238, 0.74) ;
+            border-color: rgb(245, 234, 217);
         }
-
+        form{
+    margin-top: 5;
+}
         button {
             background-color: blue;
             color: white;
+            border-radius: 3px;
+            margin-top: 6px;
         }
     </style>
 </head>
 
 <body>
-    <h3>Đăng kí tài khoản</h3>
-    <fieldset>
-        <form action="" method="post">
-            Họ và tên: <br>
-            <input type="text"> <br>
-            Email: <br>
-            <input type="email"> <br>
-            Mật khẩu: <br>
-            <input type="password"> <br>
-            Xác nhận mật khẩu: <br>
-            <input type="password"> <br>
-            <button>Đăng kí</button>
-        </form>
+    <fieldset class="container">
+        <h3>Đăng kí tài khoản</h3>
+        <fieldset class="inner">
+            <form action="" method="post">
+                Họ và tên: <br>
+                <input type="text"> <br>
+                Email: <br>
+                <input type="email"> <br>
+                Mật khẩu: <br>
+                <input type="password"> <br>
+                Xác nhận mật khẩu: <br>
+                <input type="password"> <br>
+                <button>Đăng kí</button>
+            </form>
+        </fieldset>
     </fieldset>
 </body>
 

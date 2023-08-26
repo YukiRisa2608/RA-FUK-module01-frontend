@@ -2,13 +2,14 @@
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+    
 }
-
 .container {
     width: 980px;
     margin: 0 30px;
     text-align: center;
     display: inline-block;
+    box-sizing: border-box;
 }
 
 header {
@@ -23,16 +24,12 @@ header {
 }
 
 img {
-    /* float: right; */
-    width: 200;
+    width: 250px;
     height: 400;
     max-width: 100%;
     height: auto;
 }
 
-/* header image {
-    padding-left: 50px;
-} */
 nav {
     height: 35px;
     background-color: chocolate;
@@ -49,6 +46,7 @@ nav .menu ul li {
 }
 
 nav .menu ul li a {
+    text-decoration: none;
     color: aliceblue;
     font-size: 15px;
 }
@@ -80,26 +78,6 @@ h3 {
 
 h5 {
     text-transform: uppercase;
-}
-
-.stories li {
-    display: block;
-    float: left;
-    width: 200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    /* box-sizing: border-box; */
-    /* flex-wrap: wrap; */
-}
-
-.story-info a {
-    display: block;
-    text-decoration: none;
-}
-
-.story-genre {
-    text-transform: uppercase;
-    color: darkgrey;
 }
 
 .submenu {
@@ -135,4 +113,21 @@ ul.root>li:hover ul.submenu {
 
 ul.root>li {
     position: relative;
+}
+.items{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.items__info{
+    display: flex;
+    flex-direction: column;
+
+}
+.items__info--typeof{
+    text-transform: uppercase;
+    color: gray;
+}
+.items__info--name{
+    color: rgba(121, 38, 8, 0.795);
 }

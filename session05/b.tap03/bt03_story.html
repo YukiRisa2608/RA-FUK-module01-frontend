@@ -9,20 +9,22 @@
 </head>
 
 <body>
-    <nav class="container">
+    <!-- bao bọc toàn trang -->
+    <section class="container">  
         <div>
+            <!-- tên trang -->
             <header>
-                <!-- <a href="#"><img src="/module01/session04/sakura.jpg" width="100" height="100" alt="sakura"></a> -->
                 <h1>Đọc truyện online</h1>
             </header>
         </div>
-
+<!-- thẻ menu danh mục truyện và tìm kiếm truyện -->
         <nav>
             <div class="menu">
                 <ul class="root">
                     <li><a href="#">
                             <h5>Truyện cổ tích</h5>
                         </a>
+                        <!-- submenu để khi hoover menu chính sẽ ra danh mục truyện -->
                         <ul class="submenu">
                             <li><a href="">Tấm cám</a></li>
                             <li><a href="">Cây khế</a></li>
@@ -33,13 +35,37 @@
                     </li>
                     <li><a href="#">
                             <h5>Truyện ngụ ngôn</h5>
-                        </a></li>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="">Tấm cám</a></li>
+                            <li><a href="">Cây khế</a></li>
+                            <li><a href="">Sọ dừa</a></li>
+                            <li><a href="">Cây bút thần</a></li>
+                            <li><a href="">Bảy điều ước</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">
                             <h5>Truyện cười</h5>
-                        </a></li>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="">Tấm cám</a></li>
+                            <li><a href="">Cây khế</a></li>
+                            <li><a href="">Sọ dừa</a></li>
+                            <li><a href="">Cây bút thần</a></li>
+                            <li><a href="">Bảy điều ước</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">
                             <h5>Truyện thần thoại</h5>
-                        </a></li>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="">Tấm cám</a></li>
+                            <li><a href="">Cây khế</a></li>
+                            <li><a href="">Sọ dừa</a></li>
+                            <li><a href="">Cây bút thần</a></li>
+                            <li><a href="">Bảy điều ước</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="search">
@@ -47,73 +73,84 @@
                 <button>Tìm kiếm</button>
             </div>
         </nav>
-        <div id="main">
+        <div class="main">
             <div class="headline">
                 <h3>Danh mục truyện hot</h3>
             </div>
-            <ul class="stories">
-                <li>
-                    <div class="story-name">
-                        <div class="story-top">
-                            <a href="" class="story-img">
-                                <img src="/module01/session04/cao.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="story-info">
-                            <a href="" class="story-genre">Truyện ngụ ngôn</a>
-                            <a href="" class="story-title">Cáo già và mèo rừng</a>
-                        </div>
+            <div class="items">
+                <div class="items__01">
+                    <div class="items__img">
+                        <a href="" class="story-img">
+                            <img src="/module01/session05/b.tap03/img/cao.jpg" alt="">
+                        </a>
                     </div>
-
-                </li>
-                <li>
-                    <div class="story-name">
-                        <div class="story-top">
-                            <a href="" class="story-img">
-                                <img src="/module01/session04/chucuoi.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="story-info">
-                            <a href="" class="story-genre">Truyện cổ tích</a>
-                            <a href="" class="story-title">Sự tích chú cuội</a>
-                        </div>
+                    <div class="items__info">
+                        <a href="" class="items__info--typeof">Truyện ngụ ngôn</a>
+                        <a href="" class="items__info--name">Cáo già và mèo rừng</a>
                     </div>
-                </li>
-                <li>
-                    <div class="story-name">
-                        <div class="story-top">
-                            <a href="" class="story-img">
-                                <img src="/module01/session04/gau.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="story-info">
-                            <a href="" class="story-genre">Truyện ngụ ngôn</a>
-                            <a href="" class="story-title">Gấu anh và gấu em</a>
-                        </div>
+                </div>
+                <div class="items__02">
+                    <div class="items__img">
+                        <a href="" class="story-img">
+                            <img src="/module01/session05/b.tap03/img/cao.jpg" alt="">
+                        </a>
                     </div>
-                </li>
-                <li>
-                    <div class="story-name">
-                        <div class="story-top">
-                            <a href="" class="story-img">
-                                <img src="/module01/session04/hobabe.jpg" alt="">
-                            </a>
-                        </div>
-                        <div class="story-info">
-                            <a href="" class="story-genre">Truyện cổ tích</a>
-                            <a href="" class="story-title">Sự tích hồ ba bể</a>
-                        </div>
+                    <div class="items__info">
+                        <a href="" class="items__info--typeof">Truyện ngụ ngôn</a>
+                        <a href="" class="items__info--name">Cáo già và mèo rừng</a>
                     </div>
-                </li>
-
-
-
-            </ul>
+                </div>
+                <div class="items__03">
+                    <div class="items__img">
+                        <a href="" class="story-img">
+                            <img src="/module01/session05/b.tap03/img/cao.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="items__info">
+                        <a href="" class="items__info--typeof">Truyện ngụ ngôn</a>
+                        <a href="" class="items__info--name">Cáo già và mèo rừng</a>
+                    </div>
+                </div>
+                <div class="items__04">
+                    <div class="items__img">
+                        <a href="" class="story-img">
+                            <img src="/module01/session05/b.tap03/img/cao.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="items__info">
+                        <a href="" class="items__info--typeof">Truyện ngụ ngôn</a>
+                        <a href="" class="items__info--name">Cáo già và mèo rừng</a>
+                    </div>
+                </div>
+                <div class="items__05">
+                    <div class="items__img">
+                        <a href="" class="story-img">
+                            <img src="/module01/session05/b.tap03/img/cao.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="items__info">
+                        <a href="" class="items__info--typeof">Truyện ngụ ngôn</a>
+                        <a href="" class="items__info--name">Cáo già và mèo rừng</a>
+                    </div>
+                </div>
+                <div class="items__06">
+                    <div class="items__img">
+                        <a href="" class="story-img">
+                            <img src="/module01/session05/b.tap03/img/cao.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="items__info">
+                        <a href="" class="items__info--typeof">Truyện ngụ ngôn</a>
+                        <a href="" class="items__info--name">Cáo già và mèo rừng</a>
+                    </div>
+                </div>
+             
+               
+            </div>
 
         </div>
-        </div>
-        </div>
-    </nav>
+        
+    </section>
 </body>
 
 </html>

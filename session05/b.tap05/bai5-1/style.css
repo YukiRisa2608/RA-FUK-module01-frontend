@@ -37,13 +37,15 @@ h3{
     text-align: center;
 }
 form{
-    margin: 20px 50px;
+    margin: 20px 400px;
 }
 input{
-    width: 100%
+    width: 600px;
+    
 }
 button{
     background-color: black;
     color: white;
     border-radius: 3px;
+    padding: 3px;
 }

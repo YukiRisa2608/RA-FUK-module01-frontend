@@ -22,7 +22,7 @@ ul li a{
 .big-box{
     width: auto;
     height: 300px;
-    background-color: rgb(240, 251, 255);
+    background-color: whitesmoke;
     text-align: center;
     vertical-align: middle;
    
@@ -37,7 +37,7 @@ ul li a{
 }
 .box2{
     
-    background-color:rgb(218, 137, 137);
+    background-color:white;
     margin-left: 50px;
     padding: 8px;
     border-radius: 5px;

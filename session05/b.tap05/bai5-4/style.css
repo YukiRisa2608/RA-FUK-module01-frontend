@@ -6,20 +6,24 @@ fieldset{
     width: 380px;
 }
 table{
-    padding: 30px;
+    padding: 20px;
     border-spacing: 20px;
 }
 th{
     text-align: left;
 }
 tr{
-    padding: 50x;   
+    padding: 10x;   
 }
 .col2{
 text-align: right;
 }
-#total td{
+.total td{
     background-color: gray;
     border-radius: 5px;
     padding: 10px 0px;
+}
+span{
+    display: flex;
+    justify-content: space-between;
 }

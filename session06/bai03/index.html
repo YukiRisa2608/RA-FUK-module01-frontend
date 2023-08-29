@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Viết chương trình nhập điểm các môn và tính điểm trung bình -->
+    <table border="1" name=bangDiemSv>
+        <tr>
+            <th colspan="2"><input type="text" placeholder="Nhap MSSV" name=mssv value=""></th>
+        </tr>
+        <tr>
+            <td>Vat li</td>
+            <td><input type="number" placeholder="Nhap diem li" name=diemLi value=""></td>
+        </tr>
+        <tr>
+            <td>Hoa hoc</td>
+            <td><input type="number" placeholder="Nhap diem hoa" name=diemHoa value=""></td>
+        </tr>
+        <tr>
+            <td>Sinh hoc</td>
+            <td><input type="number" placeholder="Nhap diem sinh" name=diemSinh value=""></td>
+        </tr>
+        <tr>
+            <td>Diem TB</td>
+            <td><input type="button" value="Click de tinh DTB" onclick="diemTB()" name = diemTb value=""></td>
+        </tr>
+    </table>
+
+    <script>
+        function diemTB() {
+            var li = document.getElementsByName("diemLi").value;
+            var hoa = document.getElementsByName("diemHoa").value;
+            var sinh = document.getElementsByName("diemSinh").value;
+            var dtb = (li+hoa+sinh)/3;
+            document.write(dtb);
+        }
+    </script>
+</body>
+
+</html>

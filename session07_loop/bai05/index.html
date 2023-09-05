@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Xếp hạng học lực của các bạn học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kì, điểm thi cuối kì -->
+    <script>
+        let score1 = +prompt("Nhập điểm bài kiểm tra");
+        let score2 = +prompt("Nhập điểm thi giữa kì");
+        let score3 = +prompt("Nhập điểm thi cuối kì");
+        let average = ((score1 + score2 + score3) / 3);
+        document.write("Điểm trung bình cả năm của học sinh đó là " + average)
+        if (average >= 8) {
+            document.write(" : HỌC LỰC GIỎI")
+        }
+        else if (average >= 6.5) {
+            document.write(" : HỌC LỰC KHÁ")
+        }
+        else if (average >= 5) {
+            document.write(" : HỌC LỰC TRUNG BÌNH")
+        }
+        else if (average < 5) {
+            document.write(" : HỌC LỰC YẾU")
+        }
+        else {
+            document.write(" : Giá trị nhập không phù hợp")
+        }
+    </script>
+</body>
+
+</html>

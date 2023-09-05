@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- In ra dãy 20 số Fibonaci đầu tiên
+    định nghĩa dãy fibonaci là dãy số nguyên trong đó hai số hạng đầu tiên là 0 và 1. 
+sau đó số hạng tiếp theo được định nghiã là tổng của hai số hạng trước đó-->
+    <script>
+        // in ra 2 số đầu tiên là 0 và 1
+        let firstNumber = 0;
+        let secondNumber = 1;
+        document.write("Dãy 20 số Fibonaci đầu tiên" + "<br/>")
+        document.writeln(firstNumber + "<br/>");
+        document.writeln(secondNumber + "<br/>");
+        for (let i = 1; i < 19; i++) {
+            let nextnumber = firstNumber + secondNumber;
+            document.write(nextnumber + "<br/>")
+            // sau mỗi vòng lặp sẽ gán giá trị hai số hạng first, second dịch lên đằng trước số fibonaci nextNumber
+            firstNumber = secondNumber;
+            secondNumber = nextnumber;
+        }
+
+    </script>
+</body>
+
+</html>

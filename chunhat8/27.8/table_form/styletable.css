@@ -1,0 +1,33 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    width: 350px;
+    height: 300px;
+}
+thead, tfoot{
+background-color: orange;
+}
+tbody{
+    width: 400px;
+    background-color: rgb(3, 14, 14);
+}
+label{
+    color: rgb(109, 134, 17);
+}
+td{
+    padding: 10px;
+}
+#submit{
+    background-color: green;
+}
+#cancel{
+    background-color: red;
+}
+#submit, #cancel{
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+

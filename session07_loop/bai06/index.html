@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+    Viết chương trình hiển thị các số từ 1-100. 
+    Nếu số đó chia hết cho 3 thì hiển thị là Fizz,
+    nếu số đó chia hết cho 5 thì hiển thị là Buzz 
+    nếu số đó chia hết cho 3 và 5 thì hiển thị là FizzBuzz
+-->
+    <script>
+        for (a = 1; a <= 100; a++) {
+            document.writeln(a);
+            if (a % 3 == 0) {
+                document.writeln(" :Fizz <br/> ")
+            }
+            else if (a % 5 == 0) {
+                document.writeln(" :Buzz <br/>")
+            }
+            else if (a % 3 == 0 && a % 5 == 0) {
+                document.writeln(" :FizzBuzz <br/>")
+            }
+            else {
+                document.writeln(" :Số không chia hết cho 3 hoặc 5 <br/>")
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+body{
+    margin: auto;
+    padding: 0;
+    width: 800px;
+    height: auto;
+    background-color: antiquewhite;
+   
+}
+.container{
+    
+  text-align: center;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: white;
+}
+
+.header__navbar ul{
+    display: flex;
+    list-style: none;
+    justify-content:space-between;
+
+}
+.header__navbar--list a{
+    text-decoration: none;
+    color: gray;
+}
+main{
+background-color: rgb(184, 176, 212);
+width: 70%;
+}
+main .flexbox img{
+    width: 25%;
+    height: auto;
+    margin: 10px;
+}
+.sidebar{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    position: relative;
+    
+}
+.sidebar .sidebar__title h3{
+    color: gray;
+    
+}
+.sidebar__lists{
+   display: flex;
+   justify-content: flex-start;
+}
+.sidebar .sidebar__lists ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar .sidebar__avatar{
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+    right: 10%;
+    
+}
+.sidebar .sidebar__avatar img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    border-radius: 50%;
+    border-color: white;
+}
+.sidebar .sidebar__lists ul{
+    list-style: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    
+    
+}
+.sidebar .sidebar__lists a{
+    text-decoration: none;
+    color: rgb(8, 1, 1);
+   display: inline-block;
+   margin: 15px;
+
+}

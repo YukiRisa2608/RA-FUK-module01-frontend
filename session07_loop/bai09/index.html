@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- In ra giai thừa của số nguyên dương N. N nhập từ browser
+    định nghĩa giai thừa là tích của một số nguyên dương liên tiếp từ 1 đến số đó.
+ví dụ 5 giai thừa (5!)=5*4*3*2*1 = 120 -->
+    <script>
+        // đặt biến số n cho người dùng nhập vào
+        let n = +prompt("Nhập một số nguyên dương để tìm giai thừa của nó");
+        // khởi tạo biến hứng kết quả bằng 1. giai thừa của 0 bằng 1
+        let result = 1;
+        if (n == 0) {
+            document.write("Giai thừa của số " + n + " là 1");
+        }
+        else {
+            // khởi tạo vòng lặp từ 1 đến n
+            for (let i = 1; i <= n; i++) {
+                // trong mỗi vòng lặp, cập nhật giá trị của result bằng tích của result với giá trị i,
+                // khi vòng lặp kết thúc, giá trị result là kết quả giai thừa.
+                result = result * i;
+            }
+            document.write("Giai thừa của số " + n + " là: " + result);
+        }
+    </script>
+
+</body>
+
+</html>

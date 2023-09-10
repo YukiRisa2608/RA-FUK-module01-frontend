@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình nhập vào một mảng kí tự,
+        //Tìm tất cả các kí tự trong mảng là (-) 
+        //Thay thế tất cả các kí tự này bằng (_)
+        let inPut = ('Nhập-vào-dòng-chữ bất kì')
+        for (i = 0; i <inPut.length; i++){
+            if (inPut[i] === ('-')) {
+                inPut = inPut.replace('-', '_');             
+            }
+        }
+        console.log(inPut);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Bài tập 3:
+// Viết chương trình JavaScript chấp nhận một số làm đầu vào và chèn dấu gạch ngang (-) giữa mỗi số chẵn.
+//  Ví dụ: nếu bạn chấp nhận 025468
+//  thì đầu ra phải là 0-254-6-8.
+        let input = prompt('Nhập vào số bất kì');
+        let output = [];
+        for (let i = 0; i < input.length; i++) {
+            output.push(input[i]);
+            if (input[i] % 2 == 0 && input[i + 1] % 2 == 0) {
+                output.push('-');
+            }
+            document.write(output);
+        }
+        let output2 = output.join('');
+        console.log(output2);
+
+//         let a = "1234456788"
+// let newaa = ""
+// for (let i = 0; i < a.length; i++) {
+//     // if (i == 0) {
+//     //     newaa  += a[i];
+//     // } else {
+//     //     if(a[i-1] % 2 == 0 && a[i]% 2 == 0) {
+//     //         newaa += "-" + a[i]; 
+//     //     } else {
+//     //         newaa  += a[i];
+//     //     }
+//     //  }
+//     if(i > 0 && a[i-1] % 2 == 0 && a[i]% 2 == 0) {
+//         newaa += "-" + a[i]; 
+//     } else {
+//         newaa  += a[i];
+//     }
+// }
+
+// console.log(newaa)
+    </script>
+</body>
+</html>

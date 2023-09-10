@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Bài tập 1: Tìm các phần tử là số nguyên tố trong mảng [3, 7, 2, 10, 5];
+        let arr = [3, 7, 2, 10, 5];
+        let index = 0;
+        for (let i = 0; i < arr.length; i++) {
+            let flag = true;
+            index = arr[i]
+            if (arr[i] < 2) {
+                flag = false;
+            } else if (arr[i] == 2) {
+                flag = true;
+            } else if (arr[i] > 2) {
+                for (let j = 2; j < arr[i]; j++) {                    
+                    if (arr[i] % j == 0) {
+                        flag = false;
+                        break;
+                    } 
+                   
+                }          
+            }
+            if (flag == true) {
+                console.log(arr[i] + ' la so nguyen to');
+            } else {
+                console.log(arr[i] + ' khong phai la so nguyen to');
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

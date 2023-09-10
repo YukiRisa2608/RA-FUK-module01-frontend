@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Bài tập 6: Bài tập tìm từ dài nhất trong một chuỗi: Cho một chuỗi, hãy tìm từ dài nhất trong chuỗi và in ra kết quả.;
+// Vis du:
+// Input: Tôi đang học IT tại Rikkei Academy03
+// ouput: Academy03 (9 kí tự -> dài nhất)
+        let Input = ('Tôi đang học IT tại Rikkei Academy03');
+        let array = Input.split(' ');
+        let result = 0;
+        let value = '';
+        for (let index = 0; index < array.length; index++) {
+            if (array[index].length > result) {
+                result = array[index].length;
+                value = array[index];
+            }            
+        }
+        console.log(value);
+        console.log(result);
+    </script>
+</body>
+</html>

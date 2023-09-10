@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình nhập vào đoạn text ngăn cách bởi dấu cách
+        //sau đó in ra chuỗi mới viết hoa chữ cái đầu tiên
+        let str = 'in ra chuỗi mới viết hoa chữ cái đầu tiên';
+        let arr = str.split(' ') //tách chuỗi thành mảng. kết quả trả lại là một mảng ['in', 'ra', 'chuỗi'...]
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+            console.log(arr[i]);
+        }
+        console.log(arr.join(' ')); //ghép các mảng đã cắt lại thành chuỗi, ngăn cách bởi dấu cách
+    </script>
+    
+</body>
+</html>

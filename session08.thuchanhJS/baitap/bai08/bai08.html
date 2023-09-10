@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình khởi tạo nhập vào một mảng số nguyên
+        //Hiển thị giá trị lớn nhất trong mảng đó
+        //Và giá trị trung bình của các phần tử trong mảng
+        let arrInts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let maxInt = arrInts[0];
+        let index = 0;
+        let sum = 0;
+        let count = 0;
+        for (let i = 0; i < arrInts.length; i++) {
+            sum += arrInts[i];
+            count += 1;
+            if (arrInts[i] > maxInt) {
+                maxInt = arrInts[i];
+                index = [i];
+            }            
+        }
+        console.log('max: ' + maxInt);
+        console.log('sum: ' + sum);
+        console.log('count: ' + count);
+        console.log('average: ' + sum/count);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình nhập vào một chuỗi, kiểm tra có phải chuỗi đối xứng hay không
+        let text1 = ('hello');
+        let text2 = ('mom');
+
+        //*******************
+        
+        if (text1 === text1.split('').reverse().join('')) {
+            console.log('text1: '+ true)
+        } else {
+            console.log('text1: '+ false)
+        }
+
+        //*******************
+
+        if (text2 === text2.split('').reverse().join('')) {
+            console.log('text2: '+ true)
+        } else {
+            console.log('text2: '+ false)
+        }
+    </script>
+</body>
+</html>

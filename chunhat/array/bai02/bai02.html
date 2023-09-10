@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Bài tập 2: Xoá các phần tử trùng nhau trong một mảng.
+        // Ví dụ:
+        // input: [1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8];
+        // output: [1,2,3,4,5,6,7,8]
+        let input = [1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8];
+        let output = [];
+        for (let i = 0; i < input.length; i++) {
+            if (!output.includes(input[i])) {
+                output.push(input[i])
+            }
+        }
+        console.log(output);
+    </script>
+</body>
+</html>

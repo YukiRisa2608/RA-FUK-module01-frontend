@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Bài 4: Viết chương trình JavaScript để tìm mục thường xuyên nhất trong một mảng.
+// Mảng mẫu : var Array1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+// Kết quả mẫu : a ( 5 lần )
+        let input = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+        let maxCount = 0;
+        let maxValue = '';
+        
+        for (let i = 0; i < input.length; i++) {
+            let count = 0;
+            for (let j = 0; j < input.length; j++) {
+                if (input[i] == input[j]) {
+                    count += 1;
+                }                
+            }
+            if (count > maxCount) {
+                maxCount = count;
+                maxValue = input[i]
+            }
+        }
+        console.log('Mục thường xuyên nhất: ' +maxValue);
+        console.log('Số lần xuất hiện: ' + maxCount);
+    </script>
+</body>
+</html>

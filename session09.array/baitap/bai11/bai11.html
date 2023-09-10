@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình cho người dùng nhập đủ 5 số nguyên vào một mảng,
+        //nếu ko phải số nguyên yêu cầu nhập lại đủ 5 số 
+        let arr =[];
+        while (arr.length<5) {
+            let inputInt = +prompt('Nhập 5 số nguyên');
+            if (Number.isInteger(inputInt)) {
+                arr.push(inputInt);
+            }
+        }
+    </script>
+</body>
+</html>

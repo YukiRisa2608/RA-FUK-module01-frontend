@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử khác nhau,
+        //Chương trình hiển thị ra được giá trị lớn nhất trong mảng 
+        //và vị trí của phần tử đó
+        let arrInts = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        //Khai báo biến maxInt để lưu giá trị lơn nhất, mặc định là phần tử đầu tiên trong mảng
+        let maxInt = arrInts[0];
+        //Khai báo biến index mặc định vị trí từ 0 để lưu vị trí của chỉ số lớn nhất
+        let index = 0;
+        //Duyệt tất cả các phần tử trong mảng, phần tử nào có giá trị lớn hơn maxInt thì gán cho 
+        //maxInt chính là phần tử đó
+        for (let i = 0; i < arrInts.length; i++) {
+            if (arrInts[i] > maxInt) {
+                maxInt = arrInts[i];
+                index = [i];
+            }            
+        }
+        console.log('max: ' + maxInt);
+        console.log('index: ' + index);
+    </script>
+</body>
+</html>

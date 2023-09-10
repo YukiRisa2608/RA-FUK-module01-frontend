@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //Viết chương trình nhập vào chuỗi ngăn cách nhau bởi dấu cách
+    //gặp dấu viết hoa chuyển về chữ thường, chữ thường chuyển sang chữ viết hoa
+    let text = ('rikkei ACADEMY');
+    let output = text.split('');
+    let upper = [];
+    let lower = [];
+    console.log(output);
+    for (let i = 0; i < output.length; i++) {
+        if (output[i] === output[i].toUpperCase()) {
+            upper = output[i].toLowerCase();
+            console.log(upper);
+        } else {
+            lower = output[i].toUpperCase();
+            console.log(lower);
+        }
+    }
+    
+  
+   </script> 
+</body>
+</html>

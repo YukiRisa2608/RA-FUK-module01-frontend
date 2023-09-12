@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Viết hàm tính giai thừa của số nguyên bất kì. gọi hàm
+        let result = 1;
+        function tinhGiaiThua(n) {
+            if (n == 0) {
+                document.write("Giai thừa của số " + n + " là: " + 1);
+            } else {
+                for (let i = 1; i <= n; i++) {
+                    result *= i;
+                }
+                document.write("Giai thừa của số " + n + " là: " + result);
+            }
+        }
+        tinhGiaiThua(5);
+    </script>
+</body>
+
+</html>

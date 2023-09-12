@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết hàm kiểm tra nếu là số nguyên dương trả về true:false
+        function kiemTraSoNgyenDuong(n) {
+            let flag = true;
+            if (n == 0) {
+                document.write(n + ': không phải là số ngyên dương, cũng không phải là số ngyên âm')
+            } else if (n > 0) {
+                flag = true;
+            } else {
+                flag = false;
+            }
+            document.write(flag);
+        }
+        kiemTraSoNgyenDuong(-1);
+    </script>
+</body>
+</html>

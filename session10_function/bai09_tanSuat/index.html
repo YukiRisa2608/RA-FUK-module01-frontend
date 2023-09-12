@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Cho người dùng nhập vào chuỗi kí tự.
+        //Viết hàm kiểm tra tần suất xuất hiện của mỗi kí tự và in ra chúng
+
+        
+        /*Tạo hàm đếm số lần xuất hiện của một phần tử trong mảng JavaScript*/
+        function countElement(array, n){
+            let count = 0;
+            for(let i=0;i<array.length;i++){
+                if(array[i]==n) //Tìm thấy phần tử giống x trong mảng thì cộng biến đếm
+                count ++;
+            }
+            console.log( "Phan tu " +  n  + " xuat hien " + count +  " lan");
+        }
+        let input = prompt('Nhap text');
+        countElement(input);
+        
+    </script>
+</body>
+</html>

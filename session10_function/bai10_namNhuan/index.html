@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Tạo hàm kiểm tra năm người dùng nhập vào có phải năm nhuận không
+// Những năm chia hết cho 4 mà không chia hết cho 100 là năm nhuận
+// Những năm chia hết cho 100 mà không chia hết cho 400 thì KHÔNG PHẢI là năm nhuận
+// Những năm chia hết đồng thời cho 100 và 400 là năm nhuận
+
+        var leapYear = function(year){
+        if ((year % 4===0 &&year%100 !==0 && year % 400 !==0)||(year%100===0 && year % 400===0)){
+        return year + " Là năm nhuận.";
+        } else{
+        return year + " Là năm không nhuận.";
+        }
+        };
+        var input = prompt("Input year: ");
+        leapYear(input);
+            </script>
+</body>
+</html>

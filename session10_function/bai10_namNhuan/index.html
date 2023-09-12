@@ -12,15 +12,16 @@
 // Những năm chia hết cho 100 mà không chia hết cho 400 thì KHÔNG PHẢI là năm nhuận
 // Những năm chia hết đồng thời cho 100 và 400 là năm nhuận
 
-        var leapYear = function(year){
-        if ((year % 4===0 &&year%100 !==0 && year % 400 !==0)||(year%100===0 && year % 400===0)){
-        return year + " Là năm nhuận.";
+        var namNhuan = function(year){
+        if ((year % 4===0 &&year%100 !==0 && year % 400 !==0)
+            ||(year%100===0 && year % 400===0)){
+        console.log(year + " Là năm nhuận.");
         } else{
-        return year + " Là năm không nhuận.";
+        console.log(year + " Là năm không nhuận."); 
         }
         };
         var input = prompt("Input year: ");
-        leapYear(input);
+        namNhuan(input);
             </script>
 </body>
 </html>

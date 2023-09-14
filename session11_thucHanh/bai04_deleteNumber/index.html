@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Viết chương trình nhập vào một chuỗi kí tự
+        //Xóa kí tự số trong dó
+        let str = ('abc123');
+        let arr = str.split('');
+        for (let i = 0; i < arr.length; i++) {
+            if (Number.isInteger(arr[i])) {
+                arr.slice(i, 1);
+                console.log(arr);        
+            }    
+        }
+    </script>
+</body>
+</html>

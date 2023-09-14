@@ -14,7 +14,7 @@ function Validator(options) {
 
     //Hàm thực hiện validate
     function validate(inputElement, rule) {
-        var errorElement = getParent(inputElement, options.formGroupSelector).querySelector('.form-message');
+        var errorElement = getParent(inputElement, options.formGroupSelector).querySelector(options.errorSelector);
         var errorMessage;
         //Lấy ra các rules của selector
         var rules = selectorRules[rule.selector];
@@ -85,6 +85,9 @@ function Validator(options) {
                                     values[input.name] = [];
                                 }
                                 values[input.name].push(input.value);
+                                break;
+                            case 'file':
+                                values[input.name] = input.files;
                                 break;
                             default:
                                 values[input.name] = input.value;

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Tạo hình trái tim rỗng bằng js
+
+       function drawHeart(a, b) {
+           for (let i = 1; i < 7; i++) {
+               for (let j = 0; j <= 7; j++) {
+                   if (!((i == 1 && (j == 1 || j == 4 || j == 7))
+                       || (i == 4 && (j == 1 || j == 7))
+                       || (i == 5 && (j <= 2 || j >= 6 ))
+                       || (i == 6 && (j <= 3 || j >= 5)))) {
+                        document.write (' * ');
+                       } else {
+                        document.write('   ')
+                       }
+               }
+               document.write('<br>')
+           }
+       }
+                
+       drawHeart();
+                
+                       
+       
+      
+    </script>
+</body>
+
+</html>

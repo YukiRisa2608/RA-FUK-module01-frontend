@@ -11,14 +11,21 @@
         // Ví dụ:
         // input: [1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8];
         // output: [1,2,3,4,5,6,7,8]
-        let input = [1, 2, 3, 3, 4, 5, 5, 6, 7, 8, 8];
-        let output = [];
-        for (let i = 0; i < input.length; i++) {
-            if (!output.includes(input[i])) {
-                output.push(input[i])
-            }
-        console.log(output);
-        }
+        
+
+    //cach1
+    // let arr = [1, 2, 3, 5, 5];
+    //     let output = [];
+    //     for (let i = 0; i < arr.length; i++) {
+    //         if (!output.includes(arr[i])) {
+    //             output.push(arr[i])
+    //         }
+    //     }
+    //     console.log(output);
+
+    //cach2
+            var array = ['a', 'b', 'c','a', 'b', 'c'];
+            console.log([...(new Set(array))]);
     </script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Đề bài:
+        //Nhập vào một chuỗi là 5 chữ số nguyên, 
+        //tìm số lớn nhất và đồng thời là số duy nhất trong 5 số đó
+
+        //ý tưởng:
+        //dem so lan xuat hien->tim count=1 => sap xep be den lon => lay so cuoi
+
+        let arr = [8, 8, 1, 1, 2, 3]
+        arr.sort((a, b) => b - a) //Sap xep giam dan
+        console.log(arr);
+        for(let i in arr) {
+            i = +i; //Ép kiểu biến i từ string về number
+                if (arr[i] === arr[i + 1] || arr[i] === arr[i - 1]) {
+                    continue;
+                } else {
+                    console.log('Số cần tìm: ', arr[i]);
+                    break;
+                }           
+            }
+
+        
+         
+    </script>
+</body>
+</html>

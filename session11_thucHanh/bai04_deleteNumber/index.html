@@ -12,6 +12,8 @@
         let str = ('abc123');
         let arr = str.split('');
         for (let i = 0; i < arr.length; i++) {
+            i = +i;
+            console.log(typeof(arr[i]));
             if (Number.isInteger(arr[i])) {
                 arr.slice(i, 1);
                 console.log(arr);        

@@ -11,24 +11,46 @@
         //Nhập vào một chuỗi là 5 chữ số nguyên, 
         //tìm số lớn nhất và đồng thời là số duy nhất trong 5 số đó
 
-        //ý tưởng:
-        //dem so lan xuat hien->tim count=1 => sap xep be den lon => lay so cuoi
-
-        let arr = [8, 8, 1, 1, 2, 3]
-        arr.sort((a, b) => b - a) //Sap xep giam dan
-        console.log(arr);
-        for(let i in arr) {
-            i = +i; //Ép kiểu biến i từ string về number
-                if (arr[i] === arr[i + 1] || arr[i] === arr[i - 1]) {
-                    continue;
-                } else {
-                    console.log('Số cần tìm: ', arr[i]);
-                    break;
-                }           
-            }
-
+        //cách 1
+        //ý tưởng: sắp xếp giảm dần, nếu số đó giống số đằng trước hoặc sau nó thì loại.
         
-         
+        // let arr = [8, 8, 1, 1, 2, 3]
+        // arr.sort((a, b) => b - a) //Sap xep giam dan
+        // console.log(arr);
+        // for(let i in arr) {
+        //     i = +i; //Ép kiểu biến i từ string về number
+        //         if (arr[i] === arr[i + 1] || arr[i] === arr[i - 1]) {
+        //             continue;
+        //         } else {
+            //             console.log('Số cần tìm: ', arr[i]);
+        //             break;
+        //         }           
+        //     }
+        
+        //cach 2
+        //dem so lan xuat hien->tim count=1 => sap xep be den lon => lay so cuoi
+        let arr = [5, 5, 4, 3, 1];
+
+        // let newArray = [... new Set(arr)];
+        let newArray = Array.from(new Set(arr));
+        let result = [];
+        // console.log(newArray);
+        for (let i = 0; i < newArray.length; i++) {
+            let count = 0;
+            for (let j = 0; j < arr.length; j++) {
+                if (newArray[i] == arr[j] ) {
+                    count ++;
+                }
+            }
+            if (count == 1) {
+                result.push(newArray[i]);
+            }
+        }
+        console.log(result);
+        let output = result.sort(function name(a, b) {
+            return a - b;
+        })
+        console.log(output[output.length - 1]);
     </script>
 </body>
 </html>

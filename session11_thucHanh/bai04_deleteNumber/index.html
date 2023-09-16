@@ -9,15 +9,14 @@
     <script>
         //Viết chương trình nhập vào một chuỗi kí tự
         //Xóa kí tự số trong dó
-        let str = ('abc123');
-        let arr = str.split('');
+        let stringNum = prompt('hay nhap vao chuoi ky tu:');
+        let arr = stringNum.split("");
+        console.log(arr);
+        let text = "";
         for (let i = 0; i < arr.length; i++) {
-            i = +i;
-            console.log(typeof(arr[i]));
-            if (Number.isInteger(arr[i])) {
-                arr.slice(i, 1);
-                console.log(arr);        
-            }    
+            if (Number.isNaN(arr[i] % 1)) {
+                text += arr[i];
+            }
         }
     </script>
 </body>

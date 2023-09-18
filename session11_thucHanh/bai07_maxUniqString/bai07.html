@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Cho người dùng nhập vào 1 chuỗi.
+        // in ra chuỗi có độ dài lớn nhất gồm các phần tử không trùng nhau.
+        // vd:
+        // input  : "bcdbef"  output : "cdbef" "b","bc","bcd",..."bcdbef","c","cd","cdb"...
+        // input  : "aaaca"   output : "ac"
+        // input  : "aaaaa"   output : "a"
+        // input  : "aabbacc" output : "bac"
+        const chuoi = prompt("Nhập chuỗi: ");
+        let chuoiCon = '';
+        let chuoiCanTim = '';
+        for (let i = 0; i < chuoi.length; i++) {
+            for (let j = i + 1; j < chuoi.length; j++) {
+                /*kiểm tra nếu chuoiCon chưa bao gồm 1 ký nào tự đó*/
+                if (!chuoiCon.includes(chuoi[j])) {
+                    /* thêm ký tự đó vào chuoiCon*/
+                    chuoiCon += chuoi[j];
+                } else
+                    /*Nếu chuoiCon đã bao gồm ký tự đó rồi thì kết thúc vòng lặp, chuyển sang vòng lặp mới */
+                    break;
+            }
+        }
+        /*Nếu  chuoicon có chiều dài lớn hơn chuoiCanTim thì gán chuoiCanTim bằng chuoiCon*/
+        if (chuoiCon.length > chuoiCanTim.length) {
+            chuoiCanTim = chuoiCon;
+        }
+        console.log(chuoiCanTim);
+    </script>
+</body>
+
+</html>

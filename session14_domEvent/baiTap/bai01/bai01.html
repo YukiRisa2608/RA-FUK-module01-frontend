@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .img {
+        width: 200px;
+        height: 200px;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
+<body>
+    <!-- 1. tạo  1 div chứa 1 cái ảnh khi click vào ảnh đó sẽ thay đổi thành
+        ảnh khác.
+    -->
+    <div class="img">
+        <img id="image" onclick="change()"
+            src="./img1.jpg"
+            alt="anh1">
+
+    </div>
+
+</body>
+<script>
+    let images = ["./img2.jpg", "./img3.jpg"]
+    let count = 0;
+    function change() {
+        count++;
+        console.log(count);
+        if (count == 2) {
+            count = 0;
+        }
+        document.getElementById("image").src = images[count];
+    }
+</script>
+
+</html>

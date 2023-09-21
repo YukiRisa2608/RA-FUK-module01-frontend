@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>My First Page</h2>
+    <p id = 'demo1' class="demo" name="demo">Text1</p>
+    <p id = 'demo2' class="demo" name="demo">Text2</p>
+    <p id = 'demo3' class="demo" name="demo">Text3</p>
+
+    <form action="" id = 'form1'>
+       First name: <input type="text" name="fname" id="" value="Rikkei"> <br>
+       Last name: <input type="text" name="lname" id="" value="Academy"> <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p>These are the values of each element in the form:</p>
+    <p id="demo"></p>
+    <!-- 
+    Finding HTML elements by id
+    Finding HTML elements by tag name
+    Finding HTML elements by class name
+    Finding HTML elements by CSS selectors
+    Finding HTML elements by HTML object collections -->
+    
+    <script>
+    //1. Finding HTML elements by id
+    // return the element as an object (in element)||null.
+        let way1 = document.getElementById('demo1')
+        console.log(way1.innerHTML);
+
+    //2. Finding HTML elements by tag name (finds all <p> elements)
+        let way2 = document.getElementsByTagName('p')
+        console.log(way2[0].innerHTML);
+
+    //ex: finds the element with id="demo1", and then finds all <p> elements inside "demo1":
+        let way0 = way1.getElementsByTagName('p');
+        // console.log(way3[0].innerHTML);
+
+    //3. Finding HTML elements by class name
+        let way3 = document.getElementsByClassName('demo');
+        console.log(way3[0].innerHTML);
+
+    //4. Finding HTML elements by CSS selectors
+        // returns a list of all <p> elements with class="demo"
+        let way4 = document.querySelectorAll('p.demo');
+        console.log(way4[0].innerHTML);
+
+    //5. Finding HTML elements by HTML object collections 
+        // finds the form element with id="frm1", in the forms collection, and displays all element values:
+
+        let way5 = document.forms['form1'];
+        // console.log(x);
+        let text = '';
+        for (let i = 0; i < way5.length; i++) {
+            text += way5.elements[i].value + '<br>';           
+        }
+        // document.getElementById('demo').innerHTML = text;
+        console.log(text);
+
+/* The following HTML objects (and object collections) are also accessible:
+document.anchors
+document.body
+document.documentElement
+document.embeds
+document.forms
+document.head
+document.images
+document.links
+document.scripts
+document.title */
+    </script>
+</body>
+</html>

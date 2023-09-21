@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+The easiest way to modify the content of an HTML element is by using the innerHTML property. 
+-->
+<p id = 'demo1'>Hello</p>
+<img id='demo2' src="./img1.jpg">
+<p id = 'demo3'></p>
+<script>
+//1.***Changing HTML Content***
+    //syntax: document.getElementById(id).innerHTML = new HTML
+    document.getElementById('demo1').innerHTML = 'Hello, everyone!'
+
+//2.***Changing the Value of an Attribute***
+    //syntax: document.getElementById(id).attribute = new value
+    document.getElementById("demo2").src = './img2.jpg'
+
+//3.***Dynamic HTML content***
+    document.getElementById('demo3').innerHTML = Date();
+
+//4.***document.write()
+    // In JavaScript, document.write() can be used to write directly to the HTML output stream:
+    document.write(Date());
+</script>
+</body>
+</html>

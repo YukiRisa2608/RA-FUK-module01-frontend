@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3. tạo giao diện gồm ô input và nút button (save)
+    khi người dùng nhập nội dung vào ô input nhấn (save) sẽ lưu vào 1 cái mảng -->
+    <input type="text" name="name" id="name" value="Nham">
+    <input onclick="saveInfo" type="button" value="save">
+    <script>
+        let saveValue = [];
+        function saveInfo(params) {
+            let getValue = document.getElementById('name');
+            let value = getInfo.value;
+            if (value) {
+                saveValue.push(value);
+            }
+        }
+        console.log(saveValue);
+        
+    </script>
+
+</body>
+</html>

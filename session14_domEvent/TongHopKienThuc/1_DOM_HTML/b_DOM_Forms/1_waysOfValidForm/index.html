@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- form1 -->
+    <h2>Form1: HTML Validation</h2>
+    <p>If a form field (fname) is empty, this function alerts a message, and returns false, to prevent the form from being submitted:</p>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+        Full Name: <br>
+        <input type="text" name="fname"> <br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <!-- form2 -->
+    <h2>Form2: Validate Numeric Input</h2>
+    <p>JavaScript is often used to validate numeric input:</p>
+    <p>Please input a number between 1 and 10:</p>
+    <input id="numb"> <br>
+    <button type="button" onclick="validNumber()">Submit</button>
+    <p id="demo"></p>
+
+    <!-- form3 -->
+    <h2>Form3: Automatic HTML Form Validation</h2>
+    <p>If you click submit, without filling out the text field,
+        your browser will display an error message.</p>
+    <form action="/action_page.php" method="post">
+        <input type="text" name="fname" required>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="https://www.w3schools.com/html/html_form_attributes.asp">Other HTML Input Attribute</a> <br>
+    <!-- A pseudo-class is used to define a special state of an element. -->
+    <a href="https://www.w3schools.com/css/css_pseudo_classes.asp">CSS Pseudo-classes</a>
+    <script>
+        //***Form1 Validation***
+        function validateForm() {
+            let x = document.forms['myForm']['fname'].value;
+            if (x == '') {
+                alert('Name must be filled out');
+                return false;
+            }
+        }
+
+        //***form2: Validate Numeric Input***
+        function validNumber() {
+        // Get the value of the input field with id="numb"
+        let x = document.getElementById("numb").value;
+        // If x is Not a Number or less than one or greater than 10
+        let text;
+        if (isNaN(x) || x < 1 || x > 10) {
+            text = "Input not valid";
+        } else {
+            text = "Input OK";
+        }
+        document.getElementById("demo").innerHTML = text;
+        }
+
+        /* form3: Automatic HTML Form Validation
+HTML form validation can be performed automatically by the browser:
+If a form field (fname) is empty, the required attribute prevents this form from being submitted: */
+
+    </script>
+</body>
+
+</html>

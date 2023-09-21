@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>1.Changing HTML Style</h2>
+    <p id="p1">Hello World!</p>
+    <p id="p2">Hello World!</p>
+
+    <h2>2.Using Events</h2>
+    <h3 id="id1">My Heading 1</h3>
+    <button type="button" 
+     onclick="document.getElementById('id1').style.color = 'red'">Click Me!
+    </button>
+
+    <h2>3.Element invisible</h2>
+    <p id="p3">This is a text</p>
+    <input type="button" value="Hide text" onclick="document.getElementById('p3').style.visibility='hidden'">
+    <input type="button" value="Show text" onclick="document.getElementById('p3').style.visibility='visible'">
+
+    <h2>4.HTML DOM Style Object Reference</h2>
+    <a href="">https://www.w3schools.com/jsref/dom_obj_style.asp</a>
+    <script>
+    // <!--1. Changing HTML Style
+    //syntax:document.getElementById(id).style.property = new style -->
+
+    document.getElementById("p2").style.color = "blue";
+    document.getElementById("p2").style.fontFamily = "Arial";
+    document.getElementById("p2").style.fontSize = "larger"; 
+    
+    //2. Using Events
+    
+    //3.Element invisible
+
+    //4.HTML DOM Style Object Reference
+    </script>
+</body>
+</html>

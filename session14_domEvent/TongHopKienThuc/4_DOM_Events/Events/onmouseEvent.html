@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <!-- onmouseover/ onmouseout -->
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+        Mouse Over Me</div> <br>
+
+    <!-- onmousedown/onmouseup -->
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="background-color:#099628;width:90px;height:20px;padding:40px;">
+        Click Me</div>
+
+    <script>
+    // <!-- onmouseover/ onmouseout -->
+
+        function mOver(obj) {
+            obj.innerHTML = "Hello"
+        }
+
+        function mOut(obj) {
+            obj.innerHTML = "See you again!"
+        }
+
+    // <!-- onmousedown/ onmouseup -->
+
+        function mDown(obj) {
+            obj.style.backgroundColor = "#1ec5e5";
+            obj.innerHTML = "Release Me";
+        }
+
+        function mUp(obj) {
+            obj.style.backgroundColor = "#D94A38";
+            obj.innerHTML = "Thank You";
+        }
+    </script>
+<!-- More Examples
+**onmousedown and onmouseup
+Change an image when a user holds down the mouse button.
+
+**onload
+Display an alert box when the page has finished loading.
+
+**onfocus
+Change the background-color of an input field when it gets focus.
+
+**Mouse Events
+Change the color of an element when the cursor moves over it. -->
+
+
+</body>
+
+</html>

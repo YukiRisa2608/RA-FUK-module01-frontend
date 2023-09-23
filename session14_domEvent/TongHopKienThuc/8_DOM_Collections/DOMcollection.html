@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--An HTMLCollection is a collection of document elements
+         getElementsByTagName()
+         getElementsByClassName() method 
+        returns an HTMLCollection object.
+        An HTMLCollection object is an array-like list (collection) of HTML elements. 
+        HTMLCollection items can be accessed by their name, id, or index number.
+    
+        An HTMLCollection is always a live collection. 
+        Example: If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change.-->
+
+    <h2>JavaScript HTML DOM</h2>
+    <p>Hello World!</p>
+    <p>Hello Norway!</p>
+    <p id="demo"></p>
+
+    <script>
+        const myCollection = document.getElementsByTagName("p");
+        console.log(myCollection);
+
+    </script>
+
+
+</body>
+
+</html>

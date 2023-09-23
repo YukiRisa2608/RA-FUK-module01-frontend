@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript HTML Events</h2>
+<h2 onclick="changeText(this)">Click on this text!</h2>
+
+<button onclick="displayDate()" >The time is?</button>
+<p id="demo"></p> 
+<!--Đây là cách cho sự kiện vào luôn trong thẻ HTML rồi viết function ra ngoài
+    Viết id riêng ra thẻ p thì thời gian sẽ hiện xuống dưới ô button
+     Viết id ngay trong button thời gian sẽ ghi đè ngay trong nội dung ô button
+     Suy ra: button là sự kiện người dùng tác động vào
+            p là nơi để bắt sự kiện, nơi diễn ra sự kiện 
+            muốn sự kiện xảy ra khi làm gì thì gắn funtion cho element đó
+            muốn sự kiện xảy ra ở đâu thì getElement ở chỗ đó-->
+<script>
+function changeText(text) {
+    text.innerHTML = "Ooops!";
+}
+
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+</body>
+</html>

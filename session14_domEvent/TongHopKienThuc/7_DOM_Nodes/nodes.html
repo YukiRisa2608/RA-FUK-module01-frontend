@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Creating New HTML Elements (Nodes)
+To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element. -->
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+        <button onclick="myFunction()">Remove Element</button>
+
+        <script>
+        //1. Insert
+            // This code creates a new <p> element:
+            const para = document.createElement("p");
+
+            //To add text to the <p> element, you must create a text node first. This code creates a text node:
+            const node = document.createTextNode("This is a new paragraph.");
+            
+            //Then you must append the text node to the <p> element:
+            para.appendChild(node);
+
+            //Finally you must append the new element to an existing element.
+            //This code finds an existing element:        
+            const element = document.getElementById("div1");
+            
+            //This code appends the new element to the existing element:
+            element.appendChild(para);
+
+            //or: insertBefore() 
+            // const child = document.getElementById("p1");
+            // element.insertBefore(para, child);
+
+            //or: Replacing HTML Elements 
+            //parent.replaceChild(para, child);
+
+        //2. Removing Existing HTML Elements
+            function myFunction() {
+            document.getElementById("p1").remove();
+            }
+
+         
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--A NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).
+        NodeList items can only be accessed by their index number. 
+        A NodeList is most often a static collection. 
+        Example: If you add a <li> element to a list in the DOM, the list in NodeList will not change.-->
+    <p>Hello World!</p>
+    <p>Hello Norway!</p>
+    <p id="demo"></p>
+
+    <script>
+        let myNodeList = document.querySelectorAll("p");
+        console.log(myNodeList);
+    </script>
+</body>
+
+</html>

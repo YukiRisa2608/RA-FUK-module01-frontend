@@ -1,0 +1,18 @@
+.generated-container {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 30px;
+}
+
+.grid-item {
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    background-color: red;
+}
+
+.bg-green {
+    background-color: green;
+}

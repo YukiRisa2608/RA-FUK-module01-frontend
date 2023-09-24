@@ -1,0 +1,39 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="input.css">
+</head>
+<!-- Khi click button sẽ thực hiện validate giá trị nhập vào:
+Nếu không nhập giá trị hoặc nhập giá trị không phải là số thì sẽ hiển thị câu thông báo “Hãy nhập 1 chữ số vào input” màu đỏ
+Nếu nhập vào giá trị nhỏ hơn hoặc bằng 0 hiển thị câu thông  báo “Hãy nhập 1 chữ số lớn hơn 0” 
+
+	Khi nhập 1 giá trị không có lỗi sẽ thực hiện generate ra các khối theo quy tắc dưới đây:
+Nền số chẵn có màu xanh lục
+Nền số lẻ màu vàng
+Nền số nguyên tố có màu đỏ
+-->
+
+  <body>
+    <div class="container-md d-flex align-items-center flex-column">
+        <h1 class="text-success">Generate Number</h1>
+        <h5>RIKKEI ACADENY FUKUOKA</h5>
+        <form >
+            <p id="errorText" class="text-danger text-center d-none">Hãy nhập 1 chữ số vào input</p>
+            <div class="input-group">
+                <input id="input" type="text" class="form-control" placeholder="Enter Number" aria-label="" aria-describedby="basic-addon1">
+                <button id="generateNumberBtn" class="btn btn-outline-secondary bg-success text-white" type="button">Generate Numbers</button>
+            </div>
+        </form>
+        <div id="generatedContainer" class="generated-container">
+            <div class="grid-item bg-warning">1</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="input.js"></script>
+  </body>
+</html>

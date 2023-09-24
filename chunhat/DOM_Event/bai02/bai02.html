@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>RK ACADEMY</title>
+    <link rel="stylesheet" href="bai02.css">
+</head>
+<!-- Bài 2: Tạo một trang web với các yêu cầu sau:
+1. Tạo tiêu đề h1 là "HELLO EVERYBODY 2023".
+Sau khi load trang web 1 giây thì nội dung h1 sẽ chuyển thành “Chào mừng đến với rikkei academy ${year}” (year ở đây là năm hiện tại) và mỗi giây màu sắc của background cũng thay đổi ngẫu nhiên.
+2. Hiển thị một đồng hồ real-time trên trang web với kích thước font là 40px và căn giữa.
+3. Mỗi giây nội dung và background của thẻ h2 cũng thay đổi ngẫu nhiên trong danh sách các giá trị sau: 
+            var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#00ffff', '#ff00ff'];
+            var texts = ['Thử thách bản thân với javascript',
+                'Luôn luôn nỗ lực',
+                'Luôn luôn cố gắng',
+                'Không sợ khó khăn',
+                'Luôn luôn được support tận tình',
+                "Luôn luôn đồng hành"];
+4. Đặt màu nền của mục "NEVER GIVE UP!!" thành màu xanh lá cây 
+5. Đặt màu nền của mục "Thử thách học code với RK ACADEMY" thành màu vàng.
+6. Đặt màu nền của mục "Thử thách bản thân lĩnh vực mới" và "Thử thách 6 tháng fullstack" thành màu đỏ 
+7. Sử dụng các hàm JavaScript để thực hiện các thay đổi và cập nhật trên trang web
+-->
+
+<body>
+    <div class="wrapper">
+        <h1>HELLO EVERYBODY 2023</h1>
+        <div id="clock"></div>
+        <h2>Thử thách bản thân với javascript</h2>
+        <ul>
+            <li id="nvg">NEVER GIVE UP!!</li>
+            <li id="academy">Thử thách học code với RK ACADEMY</li>
+            <li id="chance">Thử thách bản thân lĩnh vực mới</li>
+            <li id="fullstack">Thử thách 6 tháng fullstack</li>
+        </ul>
+    </div>
+    <script src="bai02.js"></script>
+</body>
+</html>

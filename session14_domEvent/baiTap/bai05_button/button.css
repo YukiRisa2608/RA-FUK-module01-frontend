@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.container {
+    width: 1000px;
+    height: 400px;
+    background-color: black;
+    margin: 0 auto;
+}
+fieldset {
+    width: 800px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: white;
+}
+h2 {
+    color: rgb(212, 42, 99);
+    margin: 30px auto;
+    text-align: center;
+}
+
+h4 {
+    margin-top: 20px;
+}
+
+.score {
+    margin: 20px auto;
+}
+
+#input {
+    width: 500px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+#send {
+    width: 50px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: gray;
+}
+
+.score label {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+    background-color: rgb(214, 74, 105);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.score input {
+    display: none;
+}

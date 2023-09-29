@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RK ACADEMY</title>
+    <style>
+        .completed {
+            background-color: green;
+        }
+
+        .ongoing {
+            background-color: yellow;
+        }
+
+        .coming {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>HELLO EVERYBODY 2023</h1>
+        <div id="clock"></div>
+        <h2>Thử thách bản thân với javascript</h2>
+        <ul>
+            <li id="nvg">NEVER GIVE UP!!</li>
+            <li id="academy">Thử thách học code với RK ACADEMY</li>
+            <li id="chance">Thử thách bản thân lĩnh vực mới</li>
+            <li id="fullstack">Thử thách 6 tháng fullstack</li>
+        </ul>
+    </div>
+    <script>
+        function changeYearColor() {
+            var year = new Date().getFullYear();
+            var yearElement = document.querySelector('.wrapper h1');
+            yearElement.style.color = getRandomColorAndText()[0];
+            yearElement.textContent = `Chào mừng đến với rikkei
+academy ${year}`;
+        }
+        function changeDateTimeBackground() {
+            var dateTimeElement = document.querySelector('.wrapperh2');
+dateTimeElement.style.backgroundColor =
+                getRandomColorAndText()[0];
+            dateTimeElement.innerHTML = getRandomColorAndText()[1];
+        }
+        function getRandomColorAndText() {
+            var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00',
+                '#00ffff', '#ff00ff'];
+            var texts = ['Thử thách bản thân với javascript',
+                'Luôn luôn nỗ lực',
+                'Luôn luôn cố gắng',
+                'Không sợ khó khăn',
+                'Luôn luôn được support tận tình',
+                "Luôn luôn đồng hành"];
+            var randomIndex = Math.floor(Math.random() *
+                colors.length);
+            return [colors[randomIndex], texts[randomIndex]];
+        }
+        function applyChallengeStatus() {
+            var nvgElement = document.getElementById('nvg');
+            var academyElement = document.getElementById('academy');
+            var chanceElement = document.getElementById('chance');
+            var fullstackElement =
+                document.getElementById('fullstack');
+            nvgElement.classList.add('completed');
+            academyElement.classList.add('ongoing');
+            chanceElement.classList.add('coming');
+            fullstackElement.classList.add('coming');
+        }
+        function updateClock() {
+            var clockElement = document.getElementById('clock');
+            clockElement.style.fontSize = "40px";
+            clockElement.style.textAlign = "center";
+            clockElement.style.background = getRandomColorAndText()[0];
+            var currentTime = new Date();
+            var hours = currentTime.getHours();
+            var minutes = currentTime.getMinutes();
+            var seconds = currentTime.getSeconds();
+            // Format the time to have leading zeros
+            var formattedHours = ('0' + hours).slice(-2);
+            var formattedMinutes = ('0' + minutes).slice(-2);
+            var formattedSeconds = ('0' + seconds).slice(-2);
+            var timeString = formattedHours + ':' + formattedMinutes +
+                ':' + formattedSeconds;
+            clockElement.textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        setInterval(changeYearColor, 1000);
+        setInterval(changeDateTimeBackground, 1000);
+        applyChallengeStatus();
+    </script>
+</body>
+
+</html>

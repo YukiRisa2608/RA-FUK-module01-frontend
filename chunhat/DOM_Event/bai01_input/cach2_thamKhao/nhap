@@ -1,0 +1,248 @@
+Bài 1:
+Bài 2:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>RK ACADEMY</title>
+<style>
+.completed {
+background-color: green;
+}
+.ongoing {
+background-color: yellow;
+}
+.coming {
+background-color: red;
+}
+</style>
+</head>
+<body>
+<div class="wrapper">
+<h1>HELLO EVERYBODY 2023</h1>
+<div id="clock"></div>
+<h2>Thử thách bản thân với javascript</h2>
+<ul>
+<li id="nvg">NEVER GIVE UP!!</li>
+<li id="academy">Thử thách học code với RK ACADEMY</li>
+<li id="chance">Thử thách bản thân lĩnh vực mới</li>
+<li id="fullstack">Thử thách 6 tháng fullstack</li>
+</ul>
+</div>
+<script>
+function changeYearColor() {
+var year = new Date().getFullYear();
+var yearElement = document.querySelector('.wrapper h1');
+yearElement.style.color = getRandomColorAndText()[0];
+yearElement.textContent = `Chào mừng đến với rikkei
+academy ${year}`;
+}
+function changeDateTimeBackground() {
+var dateTimeElement = document.querySelector('.wrapper
+h2');
+dateTimeElement.style.backgroundColor =
+getRandomColorAndText()[0];
+dateTimeElement.innerHTML = getRandomColorAndText()[1];
+}
+function getRandomColorAndText() {
+var colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00',
+'#00ffff', '#ff00ff'];
+var texts = ['Thử thách bản thân với javascript',
+'Luôn luôn nỗ lực',
+'Luôn luôn cố gắng',
+'Không sợ khó khăn',
+'Luôn luôn được support tận tình',
+"Luôn luôn đồng hành"];
+var randomIndex = Math.floor(Math.random() *
+colors.length);
+return [colors[randomIndex], texts[randomIndex]];
+}
+function applyChallengeStatus() {
+var nvgElement = document.getElementById('nvg');
+var academyElement = document.getElementById('academy');
+var chanceElement = document.getElementById('chance');
+var fullstackElement =
+document.getElementById('fullstack');
+nvgElement.classList.add('completed');
+academyElement.classList.add('ongoing');
+chanceElement.classList.add('coming');
+fullstackElement.classList.add('coming');
+}
+function updateClock() {
+var clockElement = document.getElementById('clock');
+clockElement.style.fontSize = "40px";
+clockElement.style.textAlign = "center";
+clockElement.style.background = getRandomColorAndText()[0];
+var currentTime = new Date();
+var hours = currentTime.getHours();
+var minutes = currentTime.getMinutes();
+var seconds = currentTime.getSeconds();
+// Format the time to have leading zeros
+var formattedHours = ('0' + hours).slice(-2);
+var formattedMinutes = ('0' + minutes).slice(-2);
+var formattedSeconds = ('0' + seconds).slice(-2);
+var timeString = formattedHours + ':' + formattedMinutes +
+':' + formattedSeconds;
+clockElement.textContent = timeString;
+}
+setInterval(updateClock, 1000);
+setInterval(changeYearColor, 1000);
+setInterval(changeDateTimeBackground, 1000);
+applyChallengeStatus();
+</script>
+</body>
+</html>
+Bài 3:
+Bài 4:
+Bai4.html
+<!DOCTYPE html>
+<html>
+<head>
+<title>World Countries Data</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h1 class="center">World Countries Data</h1>
+<div class="button-container center">
+<button id="population-button">Population</button>
+<button id="language-button">Languages</button>
+</div>
+<div id="title"></div>
+<div id="chart-container" class="center"></div>
+<script src="script.js"></script>
+</body>
+</html>
+style.css
+body {
+font-family: Arial, sans-serif;
+}
+h1.center {
+text-align: center;
+}
+.button-container.center {
+text-align: center;
+margin-top: 20px;
+}
+#chart-container {
+width: 700px;
+margin: 10px auto;
+}
+.chart {
+margin-bottom: 5px;
+}
+.bar {
+height: 30px;
+background-color: #2196F3;
+}
+.country-data {
+margin-top: 5px;
+text-align: center;
+}
+.div-item {
+display: flex;
+gap: 10px;
+align-items: flex-start;
+margin-top: 10px;
+}
+.div-item > div {
+min-width: 100px;
+text-align: left;
+}
+#title{
+text-align: center;
+margin-top: 10px;
+}
+button {
+padding: 8px;
+width: 120px;
+background-color: rgb(255, 174, 0);
+border: none;
+border-radius: 5px;
+}
+script.js
+// Population data
+const populationData = [
+{ country: "China", population: 1444216107 },
+{ country: "India", population: 1393409038 },
+{ country: "United States", population: 332915073 },
+{ country: "Indonesia", population: 276361783 },
+{ country: "Pakistan", population: 225199937 },
+{ country: "Brazil", population: 213993437 },
+{ country: "Nigeria", population: 211400708 },
+{ country: "Bangladesh", population: 166303498 },
+{ country: "Russia", population: 145912025 },
+{ country: "Mexico", population: 130262216 }
+];
+// Language data
+const languageData = [
+{ language: "English", speakers: "91" },
+{ language: "French", speakers: "45" },
+{ language: "Arabic", speakers: "25" },
+{ language: "Spanish", speakers: "24" },
+{ language: "Portuguese", speakers: "9" },
+{ language: "Russian", speakers: "9" },
+{ language: "Dutch", speakers: "8" },
+{ language: "German", speakers: "7" },
+{ language: "Chinese", speakers: "5" },
+{ language: "Serbian", speakers: "4" }
+];
+// Create population chart
+function createPopulationChart() {
+const chartContainer = document.getElementById('chart-container');
+let title = document.getElementById('title');
+title.textContent = 'Top 10 quốc gia có dân số đông nhất thế giới'
+chartContainer.innerHTML = '';
+populationData.forEach(data => {
+let divItem = document.createElement('div');
+divItem.classList.add('div-item');
+let nameCountry = document.createElement('div');
+nameCountry.classList.add('country-data');
+nameCountry.textContent = `${data.country}`;
+divItem.appendChild(nameCountry);
+let bar = document.createElement('div');
+bar.classList.add('bar');
+bar.style.width = `${(data.population /
+populationData[0].population) * 100}%`;
+divItem.appendChild(bar);
+let population = document.createElement('div');
+bar.classList.add('bar');
+population.textContent = `${data.population}`;
+divItem.appendChild(population);
+chartContainer.appendChild(divItem)
+});
+}
+// Create language chart
+function createLanguageChart() {
+const chartContainer = document.getElementById('chart-container');
+let title = document.getElementById('title');
+title.textContent = 'Top 10 ngôn ngữ được nói nhiều nhất trên thế
+giới'
+chartContainer.innerHTML = '';
+languageData.forEach(data => {
+let divItem = document.createElement('div');
+divItem.classList.add('div-item');
+let nameCountry = document.createElement('div');
+nameCountry.classList.add('country-data');
+nameCountry.textContent = `${data.language}`;
+divItem.appendChild(nameCountry);
+let bar = document.createElement('div');
+bar.classList.add('bar');
+bar.style.width = `${(parseFloat(data.speakers) /
+parseFloat(languageData[0].speakers)) * 100}%`;
+divItem.appendChild(bar);
+let speakers = document.createElement('div');
+bar.classList.add('bar');
+speakers.textContent = `${data.speakers}`;
+divItem.appendChild(speakers);
+chartContainer.appendChild(divItem);
+});
+}
+// Handle population button click
+const populationButton = document.getElementById('population-button');
+populationButton.addEventListener('click', () => {
+createPopulationChart();
+});
+// Handle language button click
+const languageButton = document.getElementById('language-button');
+languageButton.addEventListener('click', () => {
+createLanguageChart();
+});

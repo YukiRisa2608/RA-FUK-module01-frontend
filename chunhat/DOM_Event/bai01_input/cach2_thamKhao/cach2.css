@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .number {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-weight: bold;
+    }
+    .even {
+    background-color: lightgreen;
+    }
+    .odd {
+    background-color: yellow;
+    }
+    .prime {
+    background-color: red;
+    }
+    .main {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    text-align: center;
+    }
+    h1 {
+    color: green;
+    font-size: 50px;
+    }
+    input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    }
+    button {
+    margin-left: 10px;
+    color: white;
+    background-color: green;
+    padding: 10px;
+    border-radius: 10px;
+    }
+    .error {
+    color: red;
+    text-align: left;
+    display: inline-block;
+    margin-left: 10px;
+    }
+    

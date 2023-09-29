@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            display: flex;
+            list-style: none;
+            gap: 10px;
+        }
+
+        ul li {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid black;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .pick {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Tạo10 nút click vô nút nào nút đó đổi màu -->
+    <ul id="score">
+
+    </ul>
+    <!-- <p id="name">Thuy Trang</p> -->
+    <input id="text">
+    <button onclick="save()">send</button>
+    <!-- <p>
+        <ul>
+            <li>
+                Khanh
+            </li>
+            <li>
+                Nam
+            </li>
+        </ul>
+    </p> -->
+    <!-- 
+        hien thi comment
+        
+     -->
+
+    <div class="container">
+        <!-- <ul>
+            <li>9</li>
+            <p>good</p>
+        </ul>
+        <ul>
+            <li>5</li>
+            <p>good</p>
+        </ul> -->
+
+    </div>
+
+    <script>
+        // let trang = document.getElementById('name');
+        // trang.innerHTML = `<ul>
+        //     <li>Khanh</li>
+        //     <li>Nam</li>
+        // </ul>`
+        let text = "";
+        for (let i = 1; i <= 10; i++) {
+            text += `<li onclick = "choose(${i})">${i}</li>`;
+        }
+        document.getElementById('score').innerHTML = text;
+        let score1;
+        function choose(number) {
+            console.log(number);
+            score1 = number;
+            //dung de doi mau 
+            let result = document.getElementsByTagName('li');
+            for (let i = 0; i < result.length; i++) {
+                if (number - 1 == i) {
+                    result[i].style.backgroundColor = 'pink';
+                } else {
+                    result[i].style.backgroundColor = 'white';
+                    // result[i].classlist.add('')
+
+                }
+            }
+        }
+        //khai bao mang de chua noi dung comment
+        let comments = [];
+        function save() {
+            console.log();
+            // lay gia tri o input cua nguoi dung nhap vao
+            let text = document.getElementById('text').value;
+            let info = {
+                content: text,
+                score: score1,
+                id: Math.floor(Math.random() * 478927)
+                //Math.floor de lam tron so. Vidu: 3,667 => 3
+                //Math.random de lay so bat ky tu 0 den 1. Vidu: 0,45
+            }
+            comments.push(info);
+            renderComment();
+            console.log(comments);
+        }
+
+
+        // function hien thi noi dung comment
+
+
+
+        function renderComment() {
+            let result = "";
+            for (let i = 0; i < comments.length; i++) {
+                result += `<ul>
+                               <li>${comments[i].score}</li>
+                               <p>${comments[i].content}</p>
+                               <button>edit</button>
+                               <button>delete</button>
+                          </ul>`
+
+            }
+            document.getElementsByClassName('container')[0].innerHTML = result;
+        }
+
+
+        // function sayHello() {
+        //     console.log('hello moi nguoi');
+        // }
+        // sayHello();
+    </script>
+</body>
+
+</html>

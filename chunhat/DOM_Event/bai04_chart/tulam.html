@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+    table,
+    th,
+    td {
+        padding: 10px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+    <h3>Population</h3>
+    <table id="population">
+        <tr>
+            <th>STT</th>
+            <th>Country</th>
+            <th>Population</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>China</td>
+            <td>45464</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>India</td>
+            <td>35446</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>United States</td>
+            <td>21323</td>
+        </tr>
+    </table>
+    <h3>Language</h3>
+    <table id="language">
+        <tr>
+            <th>STT</th>
+            <th>Language</th>
+            <th>Speakers</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Einglish</td>
+            <td>91</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>French</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Arabic</td>
+            <td>25</td>
+        </tr>
+    </table>
+
+    <div class="main">
+        <h3>World Countries Data</h3>
+        <button id="population">Population</button>
+        <button id="language">Language</button>
+    </div>
+
+    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+    <canvas id="myChart2" style="width:100%;max-width:600px"></canvas>
+
+    <script>
+        let x = document.getElementById('myChart');
+        x.addEventListener('click', renderChart1);
+
+        let y = document.getElementById('myChart2');
+        x.addEventListener('click', renderChart2);
+
+        function renderChart1() {
+
+        }
+
+        function renderChart2() {
+            
+        }
+
+        let a = document.querySelector('#population')
+        let xValues = ["China", "India", "United States"]
+        let yValues = ['45464', '35446', '21323']
+        var barColors = ["red", "green","blue"];
+        
+        new Chart("myChart", {
+          type: "bar",
+          data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+          },
+          options: {
+            legend: {display:false},
+            title: {
+              display: true,
+              text: "World Countries Data: Population"
+            }
+          }
+        });
+
+        let b = document.querySelector('#language')
+        let xValues2 = ["Einglish", "French", "Arabic"]
+        let yValues2 = ['91', '45', '25']
+        var barColors = ["yellow", "purple","brown"];
+        
+        new Chart("myChart2", {
+          type: "bar",
+          data: {
+            labels: xValues2,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues2
+            }]
+          },
+          options: {
+            legend: {display: false},
+            title: {
+              display: true,
+              text: "World Countries Data: Language"
+            }
+          }
+        });
+        </script>
+   
+
+</body>
+
+</html>

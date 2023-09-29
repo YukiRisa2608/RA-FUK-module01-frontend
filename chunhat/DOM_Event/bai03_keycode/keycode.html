@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+display: flex;
+flex-direction: column;
+gap: 50px;
+align-items: center;
+justify-content: center;
+height: calc(100vh - 50px);
+}
+button {
+padding: 20px;
+font-size: 28px;
+color: black;
+background-color: white;
+}
+.key-code {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 80px;
+height: 80px;
+font-size: 50px;
+color: green;
+font-weight: 600;
+}
+span {
+color: green;
+font-weight: 700;
+}
+.key-name {
+font-weight: 700;
+}
+</style>
+<script>
+document.addEventListener('keydown', function (event) {
+// Get the key code
+var keyCode = event.keyCode;
+var keyName = event.key.toUpperCase();
+// Update the HTML element with the key code
+var keyCodeElement = document.getElementById('key-code');
+var keyNameElement = document.getElementById('key-name');
+keyCodeElement.textContent = keyCode;
+keyNameElement.innerHTML = "You pressed " +
+`<span>${keyName}</span>` ;
+});
+</script>
+</head>
+<body>
+<div class="container">
+<div><button class="key-name" id="key-name">Press any key to
+display</button></div>
+<div><button class="key-code" id="key-code"></button></div>
+</div>
+</body>
+</html>

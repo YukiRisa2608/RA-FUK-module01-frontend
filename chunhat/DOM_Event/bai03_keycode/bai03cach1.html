@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        text-align: center;
+    }
+
+    input {
+        width: 30px;
+        height: 30px;
+    }
+</style>
+<body>
+    <!-- Khi ấn một phím bất kì sẽ hiển thị name và code của phím đã ấn -->
+    <button id="btn">Press any key to display</button> <br> <br>
+    <input id="display" type="text">
+    <script>
+        let a = document.getElementById('btn');
+        let b = document.getElementById('display');
+        a.addEventListener('keypress', (event)=> {
+            a.innerHTML = 'You pressed '+ event.key;           
+            b.value = event.keyCode;
+        });
+
+    </script>
+</body>
+</html>

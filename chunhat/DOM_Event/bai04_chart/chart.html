@@ -6,6 +6,64 @@ Bai4.html
     <title>World Countries Data</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    
+        h1.center {
+            text-align: center;
+        }
+    
+        .button-container.center {
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        #chart-container {
+            width: 700px;
+            margin: 10px auto;
+        }
+    
+        .chart {
+            margin-bottom: 5px;
+        }
+    
+        .bar {
+            height: 30px;
+            background-color: #2196F3;
+        }
+    
+        .country-data {
+            margin-top: 5px;
+            text-align: center;
+        }
+    
+        .div-item {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-top: 10px;
+        }
+    
+        .div-item>div {
+            min-width: 100px;
+            text-align: left;
+        }
+    
+        #title {
+            text-align: center;
+            margin-top: 10px;
+        }
+    
+        button {
+            padding: 8px;
+            width: 120px;
+            background-color: rgb(255, 174, 0);
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
 
 <body>
     <h1 class="center">World Countries Data</h1>
@@ -18,67 +76,8 @@ Bai4.html
     <script src="script.js"></script>
 </body>
 
-</html>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    h1.center {
-        text-align: center;
-    }
-
-    .button-container.center {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    #chart-container {
-        width: 700px;
-        margin: 10px auto;
-    }
-
-    .chart {
-        margin-bottom: 5px;
-    }
-
-    .bar {
-        height: 30px;
-        background-color: #2196F3;
-    }
-
-    .country-data {
-        margin-top: 5px;
-        text-align: center;
-    }
-
-    .div-item {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-        margin-top: 10px;
-    }
-
-    .div-item>div {
-        min-width: 100px;
-        text-align: left;
-    }
-
-    #title {
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    button {
-        padding: 8px;
-        width: 120px;
-        background-color: rgb(255, 174, 0);
-        border: none;
-        border-radius: 5px;
-    }
-</style>
 <script>
-
+    
     // Population data
     const populationData = [
         { country: "China", population: 1444216107 },
@@ -109,21 +108,21 @@ Bai4.html
     function createPopulationChart() {
         const chartContainer = document.getElementById('chart-container');
         let title = document.getElementById('title');
-        title.textContent = 'Top 10 quốc gia có dân số đông nhất thế giới'
-        chartContainer.innerHTML = '';
-        populationData.forEach(data => {
-            let divItem = document.createElement('div');
+            title.textContent = 'Top 10 quốc gia có dân số đông nhất thế giới'
+            chartContainer.innerHTML = '';
+            populationData.forEach(data => {
+        let divItem = document.createElement('div');
             divItem.classList.add('div-item');
-            let nameCountry = document.createElement('div');
+        let nameCountry = document.createElement('div');
             nameCountry.classList.add('country-data');
             nameCountry.textContent = `${data.country}`;
             divItem.appendChild(nameCountry);
-            let bar = document.createElement('div');
+        let bar = document.createElement('div');
             bar.classList.add('bar');
             bar.style.width = `${(data.population /
                 populationData[0].population) * 100}%`;
             divItem.appendChild(bar);
-            let population = document.createElement('div');
+        let population = document.createElement('div');
             bar.classList.add('bar');
             population.textContent = `${data.population}`;
             divItem.appendChild(population);
@@ -138,31 +137,32 @@ Bai4.html
         chartContainer.innerHTML = '';
         languageData.forEach(data => {
             let divItem = document.createElement('div');
-            divItem.classList.add('div-item');
+                divItem.classList.add('div-item');
             let nameCountry = document.createElement('div');
-            nameCountry.classList.add('country-data');
-            nameCountry.textContent = `${data.language}`;
-            divItem.appendChild(nameCountry);
+                nameCountry.classList.add('country-data');
+                nameCountry.textContent = `${data.language}`;
+                divItem.appendChild(nameCountry);
             let bar = document.createElement('div');
-            bar.classList.add('bar');
-            bar.style.width = `${(parseFloat(data.speakers) /
+                bar.classList.add('bar');
+                bar.style.width = `${(parseFloat(data.speakers) /
                 parseFloat(languageData[0].speakers)) * 100}%`;
-            divItem.appendChild(bar);
+                divItem.appendChild(bar);
             let speakers = document.createElement('div');
-            bar.classList.add('bar');
-            speakers.textContent = `${data.speakers}`;
-            divItem.appendChild(speakers);
+                bar.classList.add('bar');
+                speakers.textContent = `${data.speakers}`;
+                divItem.appendChild(speakers);
             chartContainer.appendChild(divItem);
         });
     }
     // Handle population button click
     const populationButton = document.getElementById('population-button');
-    populationButton.addEventListener('click', () => {
+        populationButton.addEventListener('click', () => {
         createPopulationChart();
     });
     // Handle language button click
     const languageButton = document.getElementById('language-button');
-    languageButton.addEventListener('click', () => {
+        languageButton.addEventListener('click', () => {
         createLanguageChart();
     });
-</script>
+    </script>
+</html>

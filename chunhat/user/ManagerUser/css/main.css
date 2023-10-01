@@ -1,0 +1,48 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+div.form-user, div.list-user {
+    width: 450px;
+    border: 1px solid #ccc;
+    margin: 25px;
+    padding: 10px;
+    float: left;
+}
+
+div.list-user {
+    width: 600px;
+}
+
+div.form-user h3,div.list-user h3 {
+    margin-top: 0px;
+    padding: 0px;
+}
+
+div.form-user label {
+    width: 150px;
+    float: left;
+}
+
+div.form-user .input {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+div.form-user .btn {
+    width: 100px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.input-error {
+    color: red;
+    padding-left: 150px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.hide {
+    display: none;
+}

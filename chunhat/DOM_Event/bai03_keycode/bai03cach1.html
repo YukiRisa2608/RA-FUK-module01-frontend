@@ -22,7 +22,7 @@
     <script>
         let a = document.getElementById('btn');
         let b = document.getElementById('display');
-        a.addEventListener('keypress', (event)=> {
+        a.addEventListener('keydown', (event)=> {
             a.innerHTML = 'You pressed '+ event.key;           
             b.value = event.keyCode;
         });

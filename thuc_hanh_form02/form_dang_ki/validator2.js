@@ -25,7 +25,7 @@ function Validator(options) {
                 case 'radio':
                 case 'checkbox':
                     errorMessage = rules[i](
-                        formElement.querySelector(rule.selector + ':checke')
+                        formElement.querySelector(rule.selector + ':checked')
                     );
                     break;
                 default:

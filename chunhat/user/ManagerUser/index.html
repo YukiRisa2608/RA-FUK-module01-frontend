@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>ユーザ管理</title>
+</head>
+<body>
+    <div class="form-user">
+        <h3>会員情報</h3>
+        <label>氏名</label>
+        <input type="text" class="input" id="fullname">
+        <p id="fullnameError" class="input-error hide"></p>
+        <br>
+        <label>性別</label>
+        <input type="radio" name="gender" id="male" value="1">男
+        <input type="radio" name="gender" id="female" value="1">女
+        <p id="genderError" class="input-error hide"></p>
+        <br>
+        <label>グループ</label>
+        <input type="text" class="input" id="group">
+        <br>
+        <label>メールアドレス</label>
+        <input type="text" class="input" id="mail">
+        <p id="mailError" class="input-error hide"></p>
+        <br>
+        <label>電話番号</label>
+        <input type="text" class="input" id="telnumber">
+        <p id="telnumberError" class="input-error hide"></p>
+        <br>
+        <label>日本語能力 </label>
+        <select class="input" id="japanlevel">
+            <option value="" disabled selected>日本語能力を選択して。</option>
+            <option value="N1">N1</option>
+            <option value="N2">N2</option>
+            <option value="N3">N3</option>
+            <option value="N4">N4</option>
+            <option value="N5">N5</option>
+        </select>
+        <p id="japanlevelError" class="input-error hide"></p>
+        <br>
+        <label>点数</label>
+        <input type="text" class="input" id="marks">
+        <p id="marksError" class="input-error hide"></p>
+        <br>
+        <label>&nbsp;</label>
+        <input type="button" class="btn" id="submit" value="登録">
+        <br>
+    </div>
+
+    <div class="list-user">
+        <h3>会員情報一覧</h3>
+        <table width="600px" border="1" cellpadding ="0" cellspacing="0">
+            <tr>
+                <th>ID</th>
+                <th>氏名</th>
+                <th>性別</th>
+                <th>グループ</th>
+                <th>メールアドレス</th>
+                <th>電話番号</th>
+                <th>日本語能力</th>
+                <th>点数</th>
+                <th>アクション</th>
+            </tr>
+        </table>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
